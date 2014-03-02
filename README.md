@@ -3,6 +3,11 @@ versioneye-client
 
 A PHP Client for [Version Eye](https://www.versioneye.com/) API
 
+[![Build Status](https://travis-ci.org/pdenis/versioneye-client.png)](https://travis-ci.org/pdenis/versioneye-client)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/pdenis/versioneye-client/badges/quality-score.png?s=61cf7eaed508a94c8f30f1b21cd6dfa47cf483e5)](https://scrutinizer-ci.com/g/pdenis/versioneye-client/)
+[![Code Coverage](https://scrutinizer-ci.com/g/pdenis/versioneye-client/badges/coverage.png?s=f46dd24eae904c3ad80456c403d4e3605006f2bd)](https://scrutinizer-ci.com/g/pdenis/versioneye-client/)
+
+
 ## Installation
 
 ### Installation by Composer
