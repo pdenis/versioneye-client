@@ -115,6 +115,7 @@ class Client
      */
     public function updateProject(Project $project, $composerJson)
     {
+
         $response = $this->getResponse(
             'post',
             sprintf('v2/projects/%s', $project->getProjectKey()),
@@ -238,15 +239,12 @@ class Client
      */
     protected function getResponse($method = 'get', $uri, array $queryParams = array(), $postFiles = array())
     {
-        $queryParams['api_key'] = $this->apiKey;
-        $this->httpClient->setDefaultOption('query', $queryParams);
-        $request = $this->httpClient->$method($uri);
+        $request = $this->httpClient->$method($uri.'?api_key='.$this->apiKey, array(), array('query' => $queryParams));
 
         if(!empty($postFiles)) {
             $request->addPostFiles($postFiles);
         }
 
-        print_r(json_encode($request->send()->json()));
         return $request->send()->json();
     }
 }
